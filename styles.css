@@ -1,7 +1,5 @@
-/* Import Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 
-/* Reset some default styles */
 body,
 h1,
 h2,
@@ -15,7 +13,7 @@ li {
 
 html,
 body {
-  height: 100%; /* Ensure the body and html take up the full height */
+  height: 100%;
 }
 
 body {
@@ -29,36 +27,30 @@ body {
 
 body::before {
   content: "";
-  position: fixed; /* Change to fixed to cover the entire viewport */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: url("./images/piwo5.jpg") no-repeat center center;
-  background-size: cover; /* Scale the background image to cover the entire container */
-  background-attachment: fixed; /* Fix the background image relative to the viewport */
-  filter: blur(5px); /* Adjust the blur level as needed */
-  z-index: -1; /* Ensure the background is behind the content */
+  background-size: cover;
+  background-attachment: fixed;
+  filter: blur(5px);
+  z-index: -1;
 }
 
-/* Header styling */
 header {
-  background-color: rgba(
-    75,
-    46,
-    30,
-    0.9
-  ); /* Darker brown color with transparency */
+  background-color: rgba(75, 46, 30, 0.9);
   color: white;
   padding: 1rem;
   display: flex;
-  align-items: center; /* Center items vertically */
+  align-items: center;
 }
 
 nav {
   display: flex;
   justify-content: center;
-  margin-left: auto; /* Push navbar to the right */
+  margin-left: auto;
 }
 
 nav ul {
@@ -76,23 +68,22 @@ nav a {
 }
 
 nav a:hover {
-  color: #ffd700; /* Gold color on hover */
+  color: #ffd700;
 }
 
-/* Main content styling */
 main {
-  flex: 1; /* Allow main to grow and take up available space */
+  flex: 1;
   padding: 2rem;
-  max-width: 1000px; /* Increased max-width */
+  max-width: 1000px;
   margin: 0 auto;
-  background-color: rgba(245, 245, 220, 0.9); /* Light beige background */
+  background-color: rgba(245, 245, 220, 0.9);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 
 h1,
 h2 {
-  color: #4b2e1e; /* Darker brown color */
+  color: #4b2e1e;
 }
 
 h1 {
@@ -119,21 +110,14 @@ li {
   margin-bottom: 0.5rem;
 }
 
-/* Footer styling */
 footer {
-  background-color: rgba(
-    75,
-    46,
-    30,
-    0.9
-  ); /* Darker brown color with transparency */
+  background-color: rgba(75, 46, 30, 0.9);
   color: white;
   text-align: center;
   padding: 1rem;
-  margin-top: auto; /* Push footer to the bottom */
+  margin-top: auto;
 }
 
-/* Form styling */
 form {
   display: flex;
   flex-direction: column;
@@ -166,10 +150,9 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #8b4513; /* Saddle brown color */
+  background-color: #8b4513;
 }
 
-/* Gallery styling */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -190,13 +173,19 @@ input[type="submit"]:hover {
   transform: scale(1.05);
 }
 
+.iframe-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 @media (min-width: 769px) {
   .gallery {
-    justify-content: center; /* Center the gallery items */
+    justify-content: center;
   }
 
   .gallery img {
-    flex: 0 0 calc(50% - 0.5rem); /* Two columns with consistent gap */
+    flex: 0 0 calc(50% - 0.5rem);
   }
 }
 
@@ -207,6 +196,6 @@ input[type="submit"]:hover {
   }
 
   .gallery img {
-    flex: 0 0 100%; /* One column on smaller screens */
+    flex: 0 0 100%;
   }
 }

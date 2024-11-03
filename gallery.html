@@ -22,13 +22,8 @@
     </header>
     <main>
       <h1 style="text-align: center">Galeria</h1>
-      <div class="gallery">
-        <!-- Add your images here -->
-        <img src="./images/piwo4.jpg" alt="Image 1" />
-        <img src="./images/piwo5.jpg" alt="Image 2" />
-        <img src="./images/piwo1,2.jpg" alt="Image 2" />
-        <img src="./images/piwo2,2.jpg" alt="Image 3" />
-
+      <div class="gallery" id="gallery"></div>
+      <div class="iframe-container">
         <iframe
           width="300"
           height="200"
@@ -44,5 +39,17 @@
     <footer>
       <p>Dawid Żak</p>
     </footer>
+    <script>
+      const images = ["piwo4.jpg", "piwo5.jpg", "piwo1,2.jpg", "piwo2,2.jpg"];
+
+      const gallery = document.getElementById("gallery");
+
+      images.forEach((image) => {
+        const imgElement = document.createElement("img");
+        imgElement.src = `./images/${image}`;
+        imgElement.alt = `Image ${image}`;
+        gallery.appendChild(imgElement);
+      });
+    </script>
   </body>
 </html>
