@@ -67,12 +67,6 @@
         .addEventListener("submit", function (event) {
           const email = document.getElementById("email").value;
           const emailPattern = /^[a-zA-Z0-9.-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-          const text = document.getElementById("message").value;
-
-          if (text.length < 10) {
-            alert("Wiadomość musi zawierać przynajmniej 10 znaków.");
-            event.preventDefault();
-          }
 
           if (!emailPattern.test(email)) {
             alert("Proszę wprowadzić poprawny adres e-mail.");
